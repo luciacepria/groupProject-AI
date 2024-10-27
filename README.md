@@ -1,1 +1,1 @@
-# groupProject-AI
+# groupProject
