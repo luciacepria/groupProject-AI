@@ -1,0 +1,11 @@
+researcher_task:
+  description: >
+    Use a search tool to gather the latest stock information for {company_name}, including key data such as current price, historical performance, market capitalization, and other relevant stock metrics.
+  expected_output: >
+    Provide a detailed report of the company’s stock performance, including metrics like current stock price, daily change percentage, 52-week high/low, market capitalization, price-earnings ratio, dividend yield, and other key performance indicators. Include relevant charts or data tables if available.
+
+accountant_task:
+  description: >
+    Calculate key financial ratios for {company_name}, including liquidity, profitability, and growth metrics, using financial statements and stock data.
+  expected_output: >
+    Provide a summary of the company’s financial health through key ratios, with a brief explanation of each and relevant trends.
