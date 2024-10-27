@@ -3,8 +3,8 @@ from crewai.project import CrewBase, agent, crew, task
 
 @CrewBase
 class ACTCrew:
-    agents_config = 'agents.yaml'
-    tasks_config = 'tasks.yaml'
+    agents_config = 'config/agents.yaml'
+    tasks_config = 'config/tasks.yaml'
 
     def _init_(self) -> None:
         pass
