@@ -21,6 +21,18 @@ class ACTCrew:
             config=self.agents_config['accountant']
         )
 
+    @agent
+    def recommender(self) -> Agent:
+        return Agent(
+        config = self.agents_config['recommender']
+        )
+
+    @agent
+    def blogger(self) -> Agent:
+        return Agent(
+            config=self.agents_config['blogger']
+        )
+
     @task
     def researcher_task(self) -> Task:
         return Task(
@@ -35,11 +47,26 @@ class ACTCrew:
             agent=self.accountant()
         )
 
+    @task
+    def recommender_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['recommender_task'],
+            agent=self.recommender()
+        )
+
+    @task
+    def blogger_task(self) -> Task:
+        return Task(
+            config=self.tasks_config['blogger_task'],
+            agent=self.blogger()
+        )
+
+
     @crew
     def crew(self) -> Crew:
         return Crew(
-            agents=[self.researcher(), self.accountant()],
-            tasks=[self.researcher_task(), self.accountant_task()],
+            agents=[self.researcher(), self.accountant(),self.recommender(), self.blogger()],
+            tasks=[self.researcher_task(), self.accountant_task(), self.recommender_task(), self.blogger_task()],
             process=Process.sequential,
             verbose=True
         )

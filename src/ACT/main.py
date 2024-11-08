@@ -3,15 +3,14 @@ import time
 from dotenv import load_dotenv
 from src.ACT.crew import ACTCrew
 from litellm.exceptions import RateLimitError
-import openai
 
 load_dotenv()
 
-openai.api_key = os.getenv('YOUR_KEY')
+api_key4 = os.getenv('EDENAI_KEY')
 
 def run():
     inputs = {
-        'company_name': 'Tesla', #Example for testing
+        'company_name': 'Tesla', 
     }
 
     crew_instance = ACTCrew()

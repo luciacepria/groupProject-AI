@@ -1,3 +1,6 @@
 [submodule "Desktop/Sprint1"]
 	path = Desktop/Sprint1
 	url = https://github.com/luciacepria/groupProject-AI
+[submodule "groupProject-AI"]
+	path = groupProject-AI
+	url = https://github.com/luciacepria/groupProject-AI
